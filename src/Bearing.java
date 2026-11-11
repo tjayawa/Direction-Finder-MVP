@@ -31,6 +31,8 @@ public class Bearing {
         if (bearing >= 0.0 && bearing <= 360.0) {
             int index = (int) Math.round((bearing / 45.0)) % 8;
             return String.format("%.1f %s", bearing, directions[index]);
+        } else {
+            throw new IllegalArgumentException();
         }
     }
 }

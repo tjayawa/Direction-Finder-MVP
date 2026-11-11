@@ -18,6 +18,8 @@ public class Location {
 
     public double getLongitude() {return this.longitude;}
 
+    public String getName() {return this.name;}
+
     @Override
     public String toString() {
         return String.format("%f\u00B0 %s, %f\u00B0 %s", latitude, (latitude >= 0.0 ? "N" : "S"),

@@ -2,20 +2,25 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.lang.IO;
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
-        try {
-            IO.println(Location.parseLocation("(40.4286301, -86.9137745)"));
-        } catch (Exception e) {
-            IO.println("Something is wrong");
-        }
+    public static Location inputLocation(String type) {
+        String name = IO.readln(String.format("Enter the %s location's name (Enter an empty string if no name)\n", type));
+        if (name.matches("\\s*")) {name = null;}
+        Location location = null;
+        do {
+            try {
+                location = Location.parseLocation(IO.readln("Input Coordinates of Location:\n"));
+            } catch (IllegalArgumentException e) {
+                IO.println("Coordinates given are not formatted correctly");
+            }
+        } while (location == null);
+        location.setName(name);
+        return location;
+    }
+
+    public static void main(String[] args) {
+        Location start = inputLocation("starting");
+        Location end = inputLocation("ending");
+        IO.println(Bearing.format(start, end));
     }
 }

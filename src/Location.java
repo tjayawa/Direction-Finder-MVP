@@ -19,7 +19,7 @@ public class Location {
         if ((latitude >= -90.0 && latitude <= 90.0) && (longitude >= -180.0 && longitude <= 180.0)) {
             this.latitude = latitude;
             this.longitude = longitude;
-            this.name = "";
+            this.name = null;
         } else {
             throw new IllegalArgumentException();
         }

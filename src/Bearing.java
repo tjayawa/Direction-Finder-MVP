@@ -23,8 +23,13 @@ public class Bearing {
     public static String format(Location start, Location end) {
         double bearing = calculate(start, end);
         int index = (int) Math.round((bearing / 45.0)) % 8;
-        return String.format("Direction from %s to %s: %.1f %s",
-                start.getName(), end.getName(), bearing, directions[index]);
+        if (start.getName() != null && end.getName() != null) {
+            return String.format("Direction from %s to %s: %.1f %s",
+                    start.getName(), end.getName(), bearing, directions[index]);
+        }
+        else {
+            return String.format("%.1f %s", bearing, directions[index]);
+        }
     }
 
     private static String format(double bearing) throws IllegalArgumentException {

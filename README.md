@@ -42,8 +42,11 @@ Features you haven't built yet but plan to (pull these from your
 "Schedule" quadrant in the Eisenhower Matrix).
 
 ~~- [ ] Move to Html~~
+
 ~~- [ ] Implement Google API and Widget~~
+
 ~~- [ ] Add Arrow that points to direction determined on devices with Orientation Features~~
+
 After talk with TA, reconsideration of Schedule
 - [ ] Move to [Direction-Finder-Final](https://github.com/tjayawa/Direction-Finder-Final.git)
 - [ ] Turn Main.java into DirectionFinder.java

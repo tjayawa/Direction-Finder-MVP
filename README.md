@@ -48,7 +48,7 @@ Features you haven't built yet but plan to (pull these from your
 ~~- [ ] Add Arrow that points to direction determined on devices with Orientation Features~~
 
 After talk with TA, reconsideration of Schedule
-- [ ] Move to [Direction-Finder-Final](https://github.com/tjayawa/Direction-Finder-Final.git)
+- [x] Move to [Direction-Finder-Final](https://github.com/tjayawa/Direction-Finder-Final.git)
 - [ ] Turn Main.java into DirectionFinder.java
 - [ ] Add Javax skeleton format to DirectionFinder
 - [ ] Implement Text field user input for Locations
